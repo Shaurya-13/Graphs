@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+<!--setting up text areas and buttons for user interaction-->
+    <EditText
+        android:id="@+id/sal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:hint="EXPENSES"
+        android:inputType="number"
+        tools:ignore="MissingConstraints"
+        android:layout_marginLeft="14dp"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/exp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/sal"
+        android:layout_marginTop="72dp"
+        android:ems="10"
+        android:hint="SALARY"
+        android:inputType="number"
+        android:layout_alignLeft="@+id/sal"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/insertBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/exp"
+        android:layout_marginTop="62dp"
+        android:layout_marginEnd="0dp"
+        android:text="SHOW GRAPH"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true"
+        tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/menuBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="190dp"
+        android:layout_marginEnd="0dp"
+        android:text="MENU"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true"
+        tools:ignore="MissingConstraints"
+        />
+
+
+<!--pulling Graph generating API-->
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lineChartView"
+        android:layout_margin="0dp"
+        android:layout_below="@+id/menuBtn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+</RelativeLayout>
